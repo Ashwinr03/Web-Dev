@@ -1,0 +1,136 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px 0px;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* Input styles */
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C5C5C5;
+    border-radius: 4px;
+    outline-color: #49557e;
+    background-color: inherit; /* Ensure background color inherits from the parent */
+    color: inherit; /* Ensure text color inherits from the parent */
+}
+
+/* Multi-field styles */
+.place-order-left .multi-field {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+.payment-options {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+/* COD Button styles */
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #49557e;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white; /* Default text color for dark mode */
+}
+
+/* Dark Mode COD Button Text Color */
+:root .payment-option {
+    color: white; /* Ensure text is white in dark mode */
+}
+
+/* Light Mode COD Button Text Color */
+.lightcolors .payment-option {
+    color: black; /* Change text to black in light mode */
+}
+
+/* Button styles */
+.payment-options button {
+    border: none;
+    background-color: #49557e;
+    color: white; /* Default text color for dark mode */
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Dark Mode Button Text Color */
+:root .payment-options button {
+    color: white; /* Ensure text is white in dark mode */
+}
+
+/* Light Mode Button Text Color */
+.lightcolors .payment-options button {
+    color: black; /* Change text to black in light mode */
+}
+
+/* Light and Dark Mode Styles */
+:root {
+    --input-background-dark: black;
+    --input-background-light: white;
+    --input-color-dark: white;
+    --input-color-light: black;
+    --title-color-dark: white;
+    --title-color-light: black;
+}
+
+/* Dark mode styles */
+:root .multi-field input {
+    background-color: var(--input-background-dark);
+    color: var(--input-color-dark);
+}
+
+:root .multi-field input::placeholder {
+    color: var(--input-color-dark);
+}
+
+/* Light mode styles */
+.lightcolors .multi-field input {
+    background-color: var(--input-background-light);
+    color: var(--input-color-light);
+}
+
+.lightcolors .multi-field input::placeholder {
+    color: var(--input-color-light);
+}
+
+:root .title {
+    color: var(--title-color-dark);
+}
+
+.lightcolors .title {
+    color: var(--title-color-light);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .place-order {
+        flex-direction: column;
+    }
+}
